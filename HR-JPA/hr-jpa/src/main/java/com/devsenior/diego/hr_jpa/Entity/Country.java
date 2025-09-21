@@ -9,9 +9,13 @@ import lombok.Data;
 public class Country {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "country_id", length = 2)
     private String id;
+
+    @Column(name = "country_name", length = 40)
     private String name;
     
-
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "region_id", referencedColumnName = "region_id")
+    private Region region;
 }
