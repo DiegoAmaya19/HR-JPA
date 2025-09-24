@@ -36,5 +36,5 @@ public class Location {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "country_id", referencedColumnName = "country_id", nullable = false)
     //en la tabla entity country ya esta el length = 2
-    private String countryId;
+    private Country countryId;
 }

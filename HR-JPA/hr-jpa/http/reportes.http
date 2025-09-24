@@ -1,0 +1,5 @@
+###
+Get http://localhost:8080/api/hr/reports/employees
+
+###
+Get http://localhost:8080/api/hr/reports/employees_department/Executive

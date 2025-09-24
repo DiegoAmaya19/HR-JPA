@@ -2,6 +2,7 @@ package com.devsenior.diego.hr_jpa.Controller;
 
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.devsenior.diego.hr_jpa.Entity.Employee;
@@ -18,6 +19,11 @@ public class ReportController {
     @GetMapping("/employees")
     public List<Employee> getAllEmployees(){
         return reportService.getAllEmployees();
+    }
+
+    @GetMapping("/employees_department/{department}")
+    public List<Employee> getAllForEmployees(@PathVariable String department){
+        return reportService.getEmployeesForDepartment(department);
     }
     
 }

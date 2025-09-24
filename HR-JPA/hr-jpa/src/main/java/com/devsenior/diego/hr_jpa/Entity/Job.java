@@ -21,9 +21,9 @@ public class Job {
     @Column(name = "job_title", length = 35, nullable = false)
     private String title;
 
-    @Column(precision = 8, scale = 2)
+    @Column
     private Double minSalary;
 
-    @Column(precision = 8, scale = 2)
+    @Column
     private Double maxSalary;
 }

@@ -26,5 +26,5 @@ public class Department {
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "location_id", referencedColumnName = "location_id")
-    private Integer location;
+    private Location location;
 }

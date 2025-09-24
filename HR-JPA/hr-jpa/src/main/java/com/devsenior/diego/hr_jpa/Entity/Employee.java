@@ -8,7 +8,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Table;
 import java.time.LocalDate;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import lombok.Data;
@@ -42,7 +41,7 @@ public class Employee {
     @JoinColumn(name = "job_id", referencedColumnName = "job_id", nullable = false)
     private Job job;
 
-    @Column(precision = 8, scale = 2, nullable = false)
+    @Column(nullable = false)
     private Double salary;
 
     @ManyToOne(cascade = CascadeType.ALL)
