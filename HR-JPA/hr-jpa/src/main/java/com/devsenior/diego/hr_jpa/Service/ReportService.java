@@ -8,4 +8,5 @@ public interface ReportService {
     List<Employee> getAllEmployees();
 
     List<Employee> getEmployeesForDepartment(String department);
+    
 }
